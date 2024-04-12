@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ProfileForm from "./components/Profile/ProfileForm";
+import UserCard from "./components/Profile/UserCard";
 
-function App() {
+const App = () => {
+  const [users, setUsers] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ProfileForm users={users} setUsers={setUsers} />
+      <hr />
+      {users.map((user, index) => (
+        <UserCard key={index} user={user} />
+      ))}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,29 @@
+.form-container {
+  width: 100%;
+}
+
+.form-container form {
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container form input {
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+  font-size: 18px;
+}
+
+.form-container form button {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: green;
+  color: white;
+}
